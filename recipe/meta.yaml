@@ -1,5 +1,5 @@
 {% set name = "Orange3-Explain" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 38538f92a9ad8e3f853666d3197a2ea0dc48a6969a7f0b1832bda19e0bb36c2c
+  sha256: 57fd5b4b99ecc204b4ea4424f98ebdc63bd7dcf59ca2ff8e489c23939402ef51
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'Explainable AI add-on for Orange3'
+  summary: Explainable AI add-on for Orange3
   description: |
     Orange3 Explain is an add-on for the Orange3 data mining suite. 
     It provides extensions for explanatory AI.
