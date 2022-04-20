@@ -1,5 +1,5 @@
 {% set name = "Orange3-Explain" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c80d96bb52ff0a7f81eae218838144300b6c3e318b4bd839246d6bcdfe36ba76
+  sha256: 639338fb9eb45bbb0545bbe23c639d4fc45737b5da5ca71eb2fc1abbc57826b2
 
 build:
   number: 0
