@@ -1,5 +1,5 @@
 {% set name = "Orange3-Explain" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3309c1832b5e950daf78a8cb1e56533b9bde4483cce0918d851418b000dba13d
+  sha256: d56ec98eee210d149a3c11e9f305d7429b82e126e67241d3f471024335e3d209
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - pyqtgraph
     - scipy
-    - shap >=0.42.0
+    - shap >=0.42.1
     - scikit-learn >=1.0.1
 
 test:
