@@ -26,7 +26,7 @@ requirements:
     - numpy
     - pyqtgraph
     - scipy
-    - shap ==0.41.*
+    - shap >=0.42.0
     - scikit-learn >=1.0.1
 
 test:
