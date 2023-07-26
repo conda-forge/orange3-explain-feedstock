@@ -10,7 +10,7 @@ source:
   sha256: 3309c1832b5e950daf78a8cb1e56533b9bde4483cce0918d851418b000dba13d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - pyqtgraph
     - scipy
-    - shap ==0.41.*
+    - shap >=0.42.0
     - scikit-learn >=1.0.1
 
 test:
