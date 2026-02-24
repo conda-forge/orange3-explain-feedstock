@@ -29,8 +29,8 @@ requirements:
     - scikit-learn >=1.7.0
     - scipy >=1.13.0
     - pyqtgraph >=0.13.1
-    - numpy 2.0.0
-    - shap ==0.50.0
+    - numpy >=2.0.0
+    - shap >=0.50.0
 
 test:
   requires:
