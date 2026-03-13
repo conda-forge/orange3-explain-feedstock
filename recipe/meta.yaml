@@ -1,5 +1,6 @@
 {% set name = "Orange3-Explain" %}
 {% set version = "0.6.11" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -11,17 +12,16 @@ source:
 
 build:
   number: 0
-  # noarch: python
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<311]
 
 requirements:
   host:
-    - python 
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - AnyQt >=0.2.0
     - Orange3 >=3.39.0
     - orange-canvas-core >=0.2.5
@@ -39,7 +39,7 @@ requirements:
 
 test:
   requires:
-    - python
+    - python {{ python_min }}
   imports:
     - orangecontrib.explain
 
