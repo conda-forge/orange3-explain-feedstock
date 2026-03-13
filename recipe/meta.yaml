@@ -30,7 +30,11 @@ requirements:
     - scipy >=1.13.0
     - pyqtgraph >=0.13.1
     - numpy >=2.0.0
-    - shap >=0.50.0 cpu*
+    - shap >=0.50.0
+  run_constrained:
+    # This allows the solver to pick the CUDA version at runtime 
+    # for the user, but doesn't force the CI to find it.
+    - shap >=0.50.0 *cpu*
 
 test:
   requires:
