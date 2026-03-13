@@ -1,6 +1,6 @@
 {% set name = "Orange3-Explain" %}
 {% set version = "0.6.11" %}
-{% set python_min = "3.11" %}
+{% set python_min = "3.11" %}  # Minimum suported version by SHAP
 
 package:
   name: {{ name|lower }}
@@ -32,10 +32,6 @@ requirements:
     - pyqtgraph >=0.13.1
     - numpy >=2.0.0
     - shap >=0.50.0
-  run_constrained:
-    # This allows the solver to pick the CUDA version at runtime 
-    # for the user, but doesn't force the CI to find it.
-    - shap >=0.50.0 *cpu*
 
 test:
   requires:
