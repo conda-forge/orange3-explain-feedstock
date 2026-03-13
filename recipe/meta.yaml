@@ -30,7 +30,7 @@ requirements:
     - scipy >=1.13.0
     - pyqtgraph >=0.13.1
     - numpy >=2.0.0
-    - shap >=0.50.0
+    - shap >=0.50.0 cpu*
 
 test:
   requires:
